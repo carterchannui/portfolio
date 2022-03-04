@@ -27,15 +27,13 @@ import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 export default function Navbar() {
     return (
         <Flex bg='gray.700' color='white'>
-            <Box p={2}>
-                <Heading fontSize='6xl'>Carter Chan-Nui
-                </Heading>
+            <Box p='2' bgGradient='linear(to-l, #7928CA, #FF0080)' bgClip='text'>
+                <Heading>Carter Chan-Nui</Heading>
             </Box>
             <Spacer/>
             <Box>
-                <Button size='lg'>
-                    About
-                </Button>
+                <Button colorScheme='teal' mr='4'>Projects</Button>
+                <Button colorScheme='teal'>About</Button>
             </Box>
         </Flex>
     );
