@@ -21,7 +21,7 @@ export default function Home() {
         <Flex bg='gray.700' color='white'>
             <Spacer/>
             <Box>
-                <Text fontSize='lg'> Aspiring Software Engineer </Text>
+                <Text fontSize='lg'> Aspiring Software Engineer! </Text>
             </Box>
             <Spacer/>
         </Flex>
