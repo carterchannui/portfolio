@@ -5,35 +5,41 @@ import { ChakraProvider,
     Box, 
     Link, 
     Text, 
+    Icon,
     IconButton, 
     Heading, 
     Button, 
-    Menu, 
+    Menu,
     MenuList, 
     MenuButton, 
     MenuItem, 
+    HStack,
     theme 
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
-import { Link as ReactLink } from "react-router-dom";
+import { Link as ReactLink } from 'react-router-dom';
+import { GoMarkGithub } from 'react-icons/go';
+import { FaLinkedinIn, FaCode } from 'react-icons/fa'
 
 export default function Navbar() {
     return (
-        <Flex bg='gray.700'>
-            <Box p='2'>
-                <Link as={ReactLink} to='/'> <Heading size='xl' color='white'> Carter Chan-Nui </Heading> </Link>
-            </Box>
+        <Flex bg='gray.700' pl='10' pr='10'>
+            <HStack>
+                <Box p='2'>
+                    <Link as={ReactLink} to='/'> <Heading size='xl' color='white'> Carter Chan-Nui </Heading> </Link>
+                </Box>
+                <Box p='2'>
+                    <Link as={ReactLink} to='/resume'> <Text size='md' color='white'> Resume </Text> </Link>
+                </Box>
+            </HStack>
             <Spacer />
-            <Box p='2'>
-                <Menu>
-                    <MenuButton as={IconButton} aria-label='Options' icon={<HamburgerIcon/>}/>
-                    <MenuList>
-                        <MenuItem> <Link as={ReactLink} to='/about'> About </Link> </MenuItem>
-                        <MenuItem> Projects </MenuItem>
-                    </MenuList>
-                </Menu>
-            </Box>
+            <HStack>
+                <Link href='https://www.github.com/carterchannui/' isExternal> <IconButton fontSize='26px' icon={<GoMarkGithub/>} /> </Link>
+                <Link href='https://www.linkedin.com/in/carterchannui/' isExternal> <IconButton fontSize='26px' icon={<FaLinkedinIn/>} /> </Link>
+                <Link href='https://github.com/carterchannui/portfolio/' isExternal> <IconButton fontSize='26px' icon={<FaCode/>} /> </Link>
+            </HStack>
+
         </Flex>
     );
 }
