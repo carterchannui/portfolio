@@ -14,6 +14,7 @@ import {
     MenuItem,
     AspectRatio,
     Center,
+    Image,
     VStack,
     theme
 } from '@chakra-ui/react';
@@ -22,15 +23,13 @@ import ResumePDF from './Chan-NuiResume.pdf';
 
 export default function Resume() {
     return (
-        <Flex bg='#1A202C'>
-            <VStack>
-                <Heading p={2}> Resume </Heading>
-                    <iframe
-                        src={ResumePDF}
-                        width='640'
-                        height='480'
-                    />
-            </VStack>
+        <Flex w='100%' h='100vh' bg='gray.700'>
+            <Box align='center' w='100%'>
+                <Heading color='white' p={5}> Resume </Heading>
+                <Box>
+                    <iframe width='600px' height='650px' src={ ResumePDF } />
+                </Box>
+            </Box>
         </Flex>
 
     );
