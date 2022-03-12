@@ -23,7 +23,7 @@ export default function Footer() {
         <Flex p={10} bg='gray.700' color='white'>
 
             <Center w='100%'>
-                <Text size='m2'> 2022 © Carter Chan-Nui </Text>
+                <Text size='md'> 2022 © Carter Chan-Nui </Text>
             </Center>
 
         </Flex>
